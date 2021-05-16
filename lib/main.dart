@@ -6,15 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
+// mainが、MyAppクラスを走らせる
 
 // #docregion MyApp
 class MyApp extends StatelessWidget {
   // #docregion build
   @override
+//   Widgetのビルド
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup Name Generator',
-      theme: ThemeData(          // Add the 3 lines from here...
+      theme: ThemeData(
+        // Add the 3 lines from here...
         primaryColor: Colors.orange,
       ),
       home: RandomWords(),
@@ -105,7 +108,6 @@ class _RandomWordsState extends State<RandomWords> {
               );
             },
           );
-
 
           final divided = tiles.isNotEmpty
               ? ListTile.divideTiles(context: context, tiles: tiles).toList()
